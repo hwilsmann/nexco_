@@ -6,32 +6,46 @@
   html {
     scroll-behavior: smooth;
   }
-  body {
-    @apply font-sans text-forest-950 antialiased;
-  }
 }
 
-@layer utilities {
-  .zigzag {
-    background-image: repeating-linear-gradient(
-      135deg,
-      transparent,
-      transparent 4px,
-      currentColor 4px,
-      currentColor 6px
-    );
-  }
-}
-
-/* Seamless marquee animation used by the roles ticker */
 @keyframes marquee {
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-50%);
   }
 }
+
 .animate-marquee {
   animation: marquee 28s linear infinite;
+}
+
+@keyframes marquee-left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-33.333333%);
+  }
+}
+
+.animate-marquee-left {
+  animation: marquee-left 28s linear infinite;
+}
+
+@keyframes marquee-right {
+  from {
+    transform: translateX(-33.333333%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee-right {
+  animation: marquee-right 28s linear infinite;
 }

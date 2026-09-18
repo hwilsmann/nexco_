@@ -87,28 +87,22 @@ const Tabs: Tab[] = [
     color: '#6A70D9',
     cards: [
       {
-        title: 'Recrutamento Spot',
-        description: 'Recrutamento e seleção de posições profissionais, técnicas, gerenciais e estratégicas.',
+        title: 'Tech Recruitment',
+        description: 'Recrutamento especializado em profissionais de tecnologia com recrutadores experientes.',
         linkLabel: 'Explorar Recrutamento',
         icon: userIcon,
       },
       {
-        title: 'Recrutamento In house',
-        description: 'Recrutamento terceirizado para alto volume de contratações com equipes dedicadas.',
+        title: 'Tech Outsourcing',
+        description: 'Equipes e estruturas terceirizadas de profissionais de tecnologia  ',
         linkLabel: 'Explorar RPO',
         icon: user2Icon,
       },
       {
-        title: 'Recrutamento On demand',
-        description: 'Curadoria e recrutamento de lideranças, C-Level, conselheiros e posições críticas.',
+        title: 'Management Squads',
+        description: 'Squads de tecnologia com gestão completa de entregas.',
         linkLabel: 'Explorar Executive Search',
         icon: user3Icon,
-      },
-      {
-        title: 'Professional Outsourcing',
-        description: 'Executivos interinos e profissionais para projetos ou demandas temporárias.',
-        linkLabel: 'Explorar IPP',
-        icon: user4Icon,
       },
     ],
   },
@@ -119,14 +113,14 @@ const Tabs: Tab[] = [
     color: '#FCA468',
     cards: [
       {
-        title: 'Recrutamento Spot',
-        description: 'Recrutamento e seleção de posições profissionais, técnicas, gerenciais e estratégicas.',
+        title: 'Recruiting Process Outsourcing (RPO)',
+        description: 'Tercerize todo o processo de recrutamento e seleção da sua empresa.',
         linkLabel: 'Explorar Recrutamento',
         icon: userIcon,
       },
       {
-        title: 'Recrutamento In house',
-        description: 'Recrutamento terceirizado para alto volume de contratações com equipes dedicadas.',
+        title: 'HR as a Service',
+        description: 'Conte com uma estrutura dedicada de RH de acordo com a sua necessidade',
         linkLabel: 'Explorar RPO',
         icon: user2Icon,
       },

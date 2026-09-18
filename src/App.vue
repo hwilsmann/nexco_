@@ -17,8 +17,8 @@
     <main>
       <!--<HeroSection />
       <LogosSection />
-      <AboutSection />
-      <SolutionsSection />-->
+      <AboutSection />-->
+      <SolutionsSection />
       <ExpertiseSection />
       <!--<TestimonialsSection />-->
       <RolesSection />

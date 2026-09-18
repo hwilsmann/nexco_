@@ -32,7 +32,7 @@ const marqueeWords = ['Operation', 'Supply Chain', 'Tech', 'Marketing']
 </script>
 
 <template>
-  <section class="relative overflow-hidden py-20">
+  <section class="relative overflow-hidden py-24">
     <div class="mx-auto max-w-content px-10 py-10 lg:px-20 lg:py-20 bg-brand-peach/40 rounded-2xl" style="padding-bottom: 20rem;">
       <span class="inline-block rounded-full bg-brand-peach px-4 py-1.5 text-xs font-medium text-forest-950/70">
         Expertises
@@ -75,10 +75,6 @@ const marqueeWords = ['Operation', 'Supply Chain', 'Tech', 'Marketing']
         </article>
       </div>
     </div>
-
-
-
-
 
     <div class="pointer-events-none relative select-none overflow-hidden whitespace-nowrap" style="margin-top: -15rem;">
       <div class="animate-marquee flex w-max gap-10 text-7xl font-extrabold text-brand-yellow sm:text-8xl">

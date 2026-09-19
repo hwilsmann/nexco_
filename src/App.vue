@@ -15,12 +15,12 @@
     <TheHeader />
 
     <main>
-      <!--<HeroSection />
+      <HeroSection />
       <LogosSection />
-      <AboutSection />-->
+      <AboutSection />
       <SolutionsSection />
       <ExpertiseSection />
-      <!--<TestimonialsSection />-->
+      <TestimonialsSection />
       <RolesSection />
     </main>
 

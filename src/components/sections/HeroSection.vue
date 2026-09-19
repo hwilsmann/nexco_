@@ -1,65 +1,47 @@
-<script setup lang="ts"></script>
+
+<script setup lang="ts">
+  import hero60Image from '../../assets/images/hero60.png'
+  import hero40Image from '../../assets/images/hero40.png'
+  import vetor4Icon from '../../components/icons/Vetor.vue'
+</script>
 
 <template>
   <section id="top" class="relative overflow-hidden bg-forest-900 text-white">
-    <div class="mx-auto grid max-w-content items-center gap-12 px-6 pb-20 pt-10 lg:grid-cols-2 lg:px-10 lg:pt-16">
+    <div class="mx-auto grid max-w-content items-center gap-10 px-6 pb-16 pt-10 sm:gap-12 sm:pb-20 lg:grid-cols-2 lg:px-10 lg:pt-16">
       <div>
-        <h1 class="text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl lg:text-[3.25rem]">
-          Encontre os talentos para
-          <span class="text-brand-green">transformar a sua empresa</span>
-        </h1>
-
-        <p class="mt-6 max-w-md text-white/60">
-          Ajudamos nossos clientes a contratar o talento certo com as
-          competências mais relevantes para os negócios.
-        </p>
-
-        <div class="mt-8 flex flex-wrap items-center gap-6">
-          <a
-            href="#contato"
-            class="inline-flex items-center gap-2 rounded-full bg-brand-green px-6 py-3 text-sm font-semibold text-forest-950 transition-transform hover:scale-[1.03]"
-          >
+        <h1 class="text-4xl font-medium leading-[1.2] tracking-tight sm:text-[2.75rem] lg:text-[3.25rem]">Encontre os talentos para <span class="text-brand-green">transformar a sua empresa</span></h1>
+        <p class="mt-6 max-w-md text-white/60 sm:mt-8">Ajudamos nossos clientes a contratar o talento certo com as competências mais relevantes para os negócios.</p>
+        <div class="mt-6 flex flex-col items-start gap-3 sm:mt-8 sm:flex-row sm:items-center sm:gap-6">
+          <a href="#contato" class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-brand-green px-4 py-2.5 text-sm font-semibold text-forest-950">
             Quero contratar
-            <span class="grid h-5 w-5 place-items-center rounded-full bg-forest-950 text-brand-green">↗</span>
+            
+            <div class="grid h-7 w-7 place-items-center rounded-full bg-forest-950">
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.292893 10.8993C-0.0976311 11.2899 -0.0976311 11.923 0.292893 12.3136C0.683418 12.7041 1.31658 12.7041 1.70711 12.3136L1 11.6064L0.292893 10.8993ZM12.6066 0.999844C12.6066 0.447559 12.1589 -0.000156485 11.6066 -0.000156063L2.6066 -0.000155937C2.05432 -0.000156274 1.6066 0.447559 1.6066 0.999844C1.6066 1.55213 2.05432 1.99984 2.6066 1.99984L10.6066 1.99984L10.6066 9.99984C10.6066 10.5521 11.0543 10.9998 11.6066 10.9998C12.1589 10.9998 12.6066 10.5521 12.6066 9.99984L12.6066 0.999844ZM1 11.6064L1.70711 12.3136L12.3137 1.70695L11.6066 0.999844L10.8995 0.292737L0.292893 10.8993L1 11.6064Z" fill="#fff" /></svg>
+            </div>
           </a>
-          <a href="#solucoes" class="inline-flex items-center gap-1.5 text-sm font-medium text-white/85 hover:text-white">
-            Conheça as soluções ↗
+
+          <a href="#contato" class="inline-flex items-center gap-2 rounded-full px-4 py-2.5 text-sm font-semibold">
+            Conheça as soluções
+
+            <div class="grid h-7 w-7 place-items-center rounded-full">
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.292893 10.8993C-0.0976311 11.2899 -0.0976311 11.923 0.292893 12.3136C0.683418 12.7041 1.31658 12.7041 1.70711 12.3136L1 11.6064L0.292893 10.8993ZM12.6066 0.999844C12.6066 0.447559 12.1589 -0.000156485 11.6066 -0.000156063L2.6066 -0.000155937C2.05432 -0.000156274 1.6066 0.447559 1.6066 0.999844C1.6066 1.55213 2.05432 1.99984 2.6066 1.99984L10.6066 1.99984L10.6066 9.99984C10.6066 10.5521 11.0543 10.9998 11.6066 10.9998C12.1589 10.9998 12.6066 10.5521 12.6066 9.99984L12.6066 0.999844ZM1 11.6064L1.70711 12.3136L12.3137 1.70695L11.6066 0.999844L10.8995 0.292737L0.292893 10.8993L1 11.6064Z" fill="#3ddc7a" /></svg>
+            </div>
           </a>
         </div>
       </div>
 
-      <div class="relative">
-        <div class="overflow-hidden rounded-[28px]">
-          <img
-            src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=900&q=80&auto=format&fit=crop"
-            alt="Consultora sorrindo em ambiente corporativo"
-            class="h-[340px] w-full object-cover sm:h-[420px]"
-          />
+      <div class="relative flex min-h-[320px] items-start justify-center sm:min-h-[380px] lg:min-h-0 lg:justify-start">
+        <div class="w-[65%] sm:w-auto">
+          <img :src="hero40Image" alt="Consultora sorrindo em ambiente corporativo" class="h-[300px] w-full rounded-2xl object-cover sm:h-[380px] sm:w-[260px] lg:h-[439px] lg:w-auto" />
         </div>
 
-        <div class="absolute -bottom-8 -left-6 hidden w-44 overflow-hidden rounded-2xl border-4 border-forest-900 shadow-xl sm:block lg:-left-10">
-          <img
-            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500&q=80&auto=format&fit=crop"
-            alt="Equipe colaborando"
-            class="h-28 w-full object-cover"
-          />
+        <div class="mt-10 w-[50%] sm:mt-16 sm:w-auto lg:mt-6">
+          <img :src="hero60Image" alt="Equipe colaborando" class="h-[190px] w-full rounded-2xl object-cover sm:h-[225px] sm:w-[220px] lg:h-[255px] lg:w-auto" />
         </div>
 
-        <svg
-          class="absolute -bottom-10 left-1/2 hidden text-brand-green sm:block"
-          width="90"
-          height="34"
-          viewBox="0 0 90 34"
-          fill="none"
-        >
-          <path
-            d="M2 30 L18 4 L34 30 L50 4 L66 30 L82 4"
-            stroke="currentColor"
-            stroke-width="6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
+        <div class="absolute bottom-12 left-1/2 -translate-x-1/2 sm:bottom-16 sm:left-[17rem] sm:translate-x-0 lg:bottom-[5.5rem] lg:left-[17.2rem]">
+          <vetor4Icon />
+        </div>
       </div>
     </div>
   </section>

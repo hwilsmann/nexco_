@@ -6,7 +6,7 @@ export default {
       colors: {
         forest: {
           950: '#0A1F13',
-          900: '#0E2A19',
+          900: '#002112',
           800: '#123420',
         },
         brand: {

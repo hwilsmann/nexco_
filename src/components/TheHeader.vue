@@ -14,13 +14,13 @@
     { label: 'Sobre Nós', href: '#sobre' },
   ]
 
-  const mobileOpen = ref(false)
+  const MobileOpen = ref(false)
 </script>
 
 <template>
   <header class="sticky top-0 z-50 bg-forest-900">
-    <div class="mx-auto flex max-w-content items-center justify-between px-6 py-5 lg:px-10">
-      <a href="#top" class="text-brand-green">
+    <div class="mx-auto flex max-w-content items-center justify-between gap-4 px-6 py-4 sm:py-5 lg:px-10">
+      <a href="#top" class="shrink-0 text-brand-green">
         <svg width="104" height="23" viewBox="0 0 104 23" fill="currentColor">
           <path d="M0 22.1847V9.64739C0 7.72075 0.424995 6.03493 1.27499 4.58995C2.15331 3.14496 3.35746 2.02581 4.88744 1.23249C6.41743 0.41083 8.15991 0 10.1149 0C12.0982 0 13.8407 0.41083 15.3423 1.23249C16.8723 2.02581 18.0623 3.14496 18.9123 4.58995C19.7906 6.03493 20.2298 7.72075 20.2298 9.64739V22.1847H16.3198V9.68989C16.3198 8.38657 16.0223 7.26742 15.4273 6.33243C14.8607 5.36911 14.0957 4.63245 13.1324 4.12245C12.1974 3.61246 11.1915 3.35746 10.1149 3.35746C9.03823 3.35746 8.01824 3.61246 7.05492 4.12245C6.11993 4.63245 5.35494 5.36911 4.75995 6.33243C4.19329 7.26742 3.90996 8.38657 3.90996 9.68989V22.1847H0Z" />
           <path d="M34.8521 22.1847C32.4722 22.1847 30.3614 21.7456 28.5197 20.8673C26.6781 19.9606 25.2331 18.6998 24.1848 17.0848C23.1648 15.4415 22.6548 13.529 22.6548 11.3474C22.6548 9.19406 23.0939 7.26742 23.9723 5.56744C24.8506 3.83912 26.0689 2.47914 27.6272 1.48748C29.1855 0.495828 30.9989 0 33.0672 0C35.3055 0 37.1613 0.481661 38.6346 1.44498C40.1363 2.40831 41.2554 3.71163 41.9921 5.35494C42.7287 6.96992 43.0971 8.78323 43.0971 10.7949C43.0971 11.1065 43.0829 11.4324 43.0546 11.7724C43.0546 12.1124 43.0262 12.4099 42.9696 12.6649H26.8197C26.9614 13.9965 27.4006 15.1298 28.1372 16.0648C28.8739 16.9715 29.8089 17.6656 30.9422 18.1473C32.1038 18.6006 33.3788 18.8273 34.7671 18.8273H40.4196V22.1847H34.8521ZM26.7772 9.90239H39.1446C39.1446 9.36406 39.0879 8.7974 38.9746 8.20241C38.8613 7.57908 38.6629 6.98409 38.3796 6.41743C38.0963 5.82244 37.7138 5.29827 37.2321 4.84494C36.7788 4.36328 36.198 3.98079 35.4896 3.69746C34.8096 3.41413 34.0022 3.27246 33.0672 3.27246C32.0755 3.27246 31.1972 3.47079 30.4322 3.86746C29.6955 4.23579 29.058 4.74578 28.5197 5.39744C27.9814 6.02077 27.5706 6.72909 27.2872 7.52241C27.0039 8.31574 26.8339 9.10906 26.7772 9.90239Z" />
@@ -31,49 +31,39 @@
       </a>
 
       <nav class="hidden items-center gap-8 lg:flex">
-        <a v-for="item in NavItems" :key="item.label" :href="item.href" class="flex items-center gap-1 text-sm text-white/85 font-semibold transition-colors hover:text-white">
+        <a v-for="item in NavItems" :key="item.label" :href="item.href" class="flex items-center gap-1 whitespace-nowrap text-sm font-semibold text-white/85 transition-colors hover:text-white">
           {{ item.label }}
 
-          <svg v-if="item.HasSubmenu" width="10" height="6" viewBox="0 0 10 6" fill="none" class="text-brand-green">
-            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-          </svg>
+          <svg v-if="item.HasSubmenu" width="10" height="6" viewBox="0 0 10 6" fill="none" class="text-brand-green"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
         </a>
       </nav>
 
-      <a href="#contato" class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-forest-800/30 px-4 py-2.5 text-sm font-semibold text-white/85">
+      <a href="#contato" class="hidden shrink-0 items-center gap-2 rounded-full border border-white/10 bg-forest-800/30 px-4 py-2.5 text-sm font-semibold text-white/85 sm:inline-flex lg:inline-flex">
         Fale com um consultor
 
         <div class="grid h-7 w-7 place-items-center rounded-full bg-brand-green">
-          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0.292893 10.8993C-0.0976311 11.2899 -0.0976311 11.923 0.292893 12.3136C0.683418 12.7041 1.31658 12.7041 1.70711 12.3136L1 11.6064L0.292893 10.8993ZM12.6066 0.999844C12.6066 0.447559 12.1589 -0.000156485 11.6066 -0.000156063L2.6066 -0.000155937C2.05432 -0.000156274 1.6066 0.447559 1.6066 0.999844C1.6066 1.55213 2.05432 1.99984 2.6066 1.99984L10.6066 1.99984L10.6066 9.99984C10.6066 10.5521 11.0543 10.9998 11.6066 10.9998C12.1589 10.9998 12.6066 10.5521 12.6066 9.99984L12.6066 0.999844ZM1 11.6064L1.70711 12.3136L12.3137 1.70695L11.6066 0.999844L10.8995 0.292737L0.292893 10.8993L1 11.6064Z" fill="#10211F"/>
-          </svg>
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.292893 10.8993C-0.0976311 11.2899 -0.0976311 11.923 0.292893 12.3136C0.683418 12.7041 1.31658 12.7041 1.70711 12.3136L1 11.6064L0.292893 10.8993ZM12.6066 0.999844C12.6066 0.447559 12.1589 -0.000156485 11.6066 -0.000156063L2.6066 -0.000155937C2.05432 -0.000156274 1.6066 0.447559 1.6066 0.999844C1.6066 1.55213 2.05432 1.99984 2.6066 1.99984C2.6066 1.55213 2.05432 1.99984 2.6066 1.99984L10.6066 1.99984L10.6066 9.99984C10.6066 10.5521 11.0543 10.9998 11.6066 10.9998C12.1589 10.9998 12.6066 10.5521 12.6066 9.99984L12.6066 0.999844ZM1 11.6064L1.70711 12.3136L12.3137 1.70695L11.6066 0.999844L10.8995 0.292737L0.292893 10.8993L1 11.6064Z" fill="#10211F" /></svg>
         </div>
       </a>
 
-      <button class="text-white lg:hidden" aria-label="Abrir menu" @click="mobileOpen = !mobileOpen">
-        <svg v-if="!mobileOpen" width="26" height="26" viewBox="0 0 24 24" fill="none">
-          <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
-        </svg>
-
-        <svg v-else width="26" height="26" viewBox="0 0 24 24" fill="none">
-          <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
-        </svg>
+      <button class="shrink-0 text-white lg:hidden" aria-label="Abrir menu" @click="MobileOpen = !MobileOpen">
+        <svg v-if="!MobileOpen" width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg>
+        <svg v-else width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg>
       </button>
     </div>
 
-    <transition
-      enter-active-class="transition ease-out duration-200"
-      enter-from-class="opacity-0 -translate-y-2"
-      enter-to-class="opacity-100 translate-y-0"
-      leave-active-class="transition ease-in duration-150"
-      leave-from-class="opacity-100"
-      leave-to-class="opacity-0"
-    >
-      <div v-if="mobileOpen" class="border-t border-white/10 bg-forest-900 px-6 pb-6 lg:hidden">
-        <nav class="flex flex-col gap-4 pt-4">
-          <a v-for="item in NavItems" :key="item.label" :href="item.href" class="text-sm text-white/85" @click="mobileOpen = false">{{ item.label }}</a>
+    <transition enter-active-class="transition ease-out duration-200" enter-from-class="opacity-0 -translate-y-2" enter-to-class="opacity-100 translate-y-0" leave-active-class="transition ease-in duration-150" leave-from-class="opacity-100" leave-to-class="opacity-0">
+      <div v-if="MobileOpen" class="border-t border-white/10 bg-forest-900 px-6 pb-6 lg:hidden">
+        <nav class="flex flex-col gap-4 pt-4 items-start">
+          <a v-for="item in NavItems" :key="item.label" :href="item.href" class="text-sm text-white/85 w-full" @click="MobileOpen = false">{{ item.label }}</a>
 
-          <a href="#contato" class="mt-2 inline-flex w-fit items-center gap-2 rounded-full bg-brand-green px-5 py-2.5 text-sm font-semibold text-forest-950">Fale com um consultor ↗</a>
+          <a href="#contato" class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-brand-green px-4 py-2.5 text-sm font-semibold text-forest-950">
+            Fale com um consultor
+
+            <div class="grid h-7 w-7 place-items-center rounded-full bg-forest-950">
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.292893 10.8993C-0.0976311 11.2899 -0.0976311 11.923 0.292893 12.3136C0.683418 12.7041 1.31658 12.7041 1.70711 12.3136L1 11.6064L0.292893 10.8993ZM12.6066 0.999844C12.6066 0.447559 12.1589 -0.000156485 11.6066 -0.000156063L2.6066 -0.000155937C2.05432 -0.000156274 1.6066 0.447559 1.6066 0.999844C1.6066 1.55213 2.05432 1.99984 2.6066 1.99984C2.6066 1.55213 2.05432 1.99984 2.6066 1.99984L10.6066 1.99984L10.6066 9.99984C10.6066 10.5521 11.0543 10.9998 11.6066 10.9998C12.1589 10.9998 12.6066 10.5521 12.6066 9.99984L12.6066 0.999844ZM1 11.6064L1.70711 12.3136L12.3137 1.70695L11.6066 0.999844L10.8995 0.292737L0.292893 10.8993L1 11.6064Z" fill="#fff" /></svg>
+            </div>
+          </a>
         </nav>
       </div>
     </transition>

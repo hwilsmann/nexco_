@@ -1,55 +1,55 @@
 <script setup lang="ts">
-import IconX from './icons/X.vue'
-import IconInstagram from './icons/Instagram.vue'
-import IconLinkedIn from './icons/LinkedIn.vue'
-import IconThreads from './icons/Threads.vue'
+  import IconX from './icons/X.vue'
+  import IconInstagram from './icons/Instagram.vue'
+  import IconLinkedIn from './icons/LinkedIn.vue'
+  import IconThreads from './icons/Threads.vue'
 
-interface FooterColumn {
-  title: string
-  links: { label: string; href: string }[]
-}
+  interface FooterColumn {
+    title: string
+    links: { label: string; href: string }[]
+  }
 
-const columns: FooterColumn[] = [
-  {
-    title: 'Para Empresas',
-    links: [
-      { label: 'Talent Acquisition', href: '#' },
-      { label: 'HR as a Service', href: '#' },
-      { label: 'Enterprise', href: '#' },
-      { label: 'Contato', href: '#contato' },
-    ],
-  },
-  {
-    title: 'Para Talentos',
-    links: [
-      { label: 'Vagas', href: '#' },
-      { label: 'Envie seu currículo', href: '#' },
-      { label: 'Talent Trends', href: '#' },
-      { label: 'Insights', href: '#' },
-    ],
-  },
-  {
-    title: 'Institucional',
-    links: [
-      { label: 'Sobre a Nexco', href: '#sobre' },
-      { label: 'Assessoria', href: '#' },
-      { label: 'Imprensa', href: '#' },
-      { label: 'Contato', href: '#contato' },
-    ],
-  },
-]
+  const columns: FooterColumn[] = [
+    {
+      title: 'Para Empresas',
+      links: [
+        { label: 'Talent Acquisition', href: '#' },
+        { label: 'HR as a Service', href: '#' },
+        { label: 'Enterprise', href: '#' },
+        { label: 'Contato', href: '#contato' },
+      ],
+    },
+    {
+      title: 'Para Talentos',
+      links: [
+        { label: 'Vagas', href: '#' },
+        { label: 'Envie seu currículo', href: '#' },
+        { label: 'Talent Trends', href: '#' },
+        { label: 'Insights', href: '#' },
+      ],
+    },
+    {
+      title: 'Institucional',
+      links: [
+        { label: 'Sobre a Nexco', href: '#sobre' },
+        { label: 'Assessoria', href: '#' },
+        { label: 'Imprensa', href: '#' },
+        { label: 'Contato', href: '#contato' },
+      ],
+    },
+  ]
 
-const socials = [
-  { label: 'X', href: '#', icon: IconX },
-  { label: 'Instagram', href: '#', icon: IconInstagram },
-  { label: 'LinkedIn', href: '#', icon: IconLinkedIn },
-  { label: 'Threads', href: '#', icon: IconThreads },
-]
+  const socials = [
+    { label: 'X', href: '#', icon: IconX },
+    { label: 'Instagram', href: '#', icon: IconInstagram },
+    { label: 'LinkedIn', href: '#', icon: IconLinkedIn },
+    { label: 'Threads', href: '#', icon: IconThreads },
+  ]
 </script>
 
 <template>
-  <footer class="bg-forest-950 pt-16 text-white">
-    <div class="mx-auto grid max-w-content gap-12 px-6 pb-14 lg:grid-cols-[1.2fr_2fr] lg:px-10">
+  <footer class="bg-forest-950 pt-12 text-white sm:pt-16">
+    <div class="mx-auto grid max-w-content gap-10 px-6 pb-10 sm:gap-12 sm:pb-14 lg:grid-cols-[1.2fr_2fr] lg:px-10">
       <div>
         <a href="#top" class="text-brand-green">
           <svg width="104" height="23" viewBox="0 0 104 23" fill="currentColor">
@@ -69,7 +69,7 @@ const socials = [
         </address>
       </div>
 
-      <div class="grid grid-cols-2 gap-8 sm:grid-cols-3">
+      <div class="grid grid-cols-1 gap-8 min-[480px]:grid-cols-2 sm:grid-cols-3 sm:gap-6 lg:gap-8">
         <div v-for="col in columns" :key="col.title">
           <h3 class="text-sm font-semibold text-brand-green">{{ col.title }}</h3>
 
@@ -82,33 +82,29 @@ const socials = [
       </div>
     </div>
 
-    <div class="mx-auto flex max-w-content items-center justify-end px-6 pb-10 lg:px-10">
-      <div class="flex gap-12">
-        <a href="#contato" class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-forest-800/30 px-4 py-2.5 text-sm font-semibold">
-          Fale com um consultor
+    <div class="mx-auto flex max-w-content flex-col gap-6 px-6 pb-10 sm:flex-row sm:items-center sm:justify-between lg:px-10">
+      <a href="#contato" class="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-forest-800/30 px-4 py-2.5 text-sm font-semibold">
+        Fale com um consultor
 
-          <div class="grid h-7 w-7 place-items-center rounded-full bg-brand-green">
-            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0.292893 10.8993C-0.0976311 11.2899 -0.0976311 11.923 0.292893 12.3136C0.683418 12.7041 1.31658 12.7041 1.70711 12.3136L1 11.6064L0.292893 10.8993ZM12.6066 0.999844C12.6066 0.447559 12.1589 -0.000156485 11.6066 -0.000156063L2.6066 -0.000155937C2.05432 -0.000156274 1.6066 0.447559 1.6066 0.999844C1.6066 1.55213 2.05432 1.99984 2.6066 1.99984L10.6066 1.99984L10.6066 9.99984C10.6066 10.5521 11.0543 10.9998 11.6066 10.9998C12.1589 10.9998 12.6066 10.5521 12.6066 9.99984L12.6066 0.999844ZM1 11.6064L1.70711 12.3136L12.3137 1.70695L11.6066 0.999844L10.8995 0.292737L0.292893 10.8993L1 11.6064Z" fill="#10211F"/>
-            </svg>
-          </div>
-        </a>
+        <div class="grid h-7 w-7 place-items-center rounded-full bg-brand-green">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.292893 10.8993C-0.0976311 11.2899 -0.0976311 11.923 0.292893 12.3136C0.683418 12.7041 1.31658 12.7041 1.70711 12.3136L1 11.6064L0.292893 10.8993ZM12.6066 0.999844C12.6066 0.447559 12.1589 -0.000156485 11.6066 -0.000156063L2.6066 -0.000155937C2.05432 -0.000156274 1.6066 0.447559 1.6066 0.999844C1.6066 1.55213 2.05432 1.99984 2.6066 1.99984L10.6066 1.99984L10.6066 9.99984C10.6066 10.5521 11.0543 10.9998 11.6066 10.9998C12.1589 10.9998 12.6066 10.5521 12.6066 9.99984L12.6066 0.999844ZM1 11.6064L1.70711 12.3136L12.3137 1.70695L11.6066 0.999844L10.8995 0.292737L0.292893 10.8993L1 11.6064Z" fill="#10211F"/></svg>
+        </div>
+      </a>
 
-        <ul class="flex items-center gap-3">
-          <li v-for="s in socials" :key="s.label">
-            <a :href="s.href" :aria-label="s.label" class="grid h-11 w-11 place-items-center rounded-full bg-forest-800">
-              <component :is="s.icon" />
-            </a>
-          </li>
-        </ul>
-      </div>
+      <ul class="flex items-center gap-3">
+        <li v-for="s in socials" :key="s.label">
+          <a :href="s.href" :aria-label="s.label" class="grid h-10 w-10 place-items-center rounded-full bg-forest-800 sm:h-11 sm:w-11">
+            <component :is="s.icon" />
+          </a>
+        </li>
+      </ul>
     </div>
 
     <div class="border-t border-white/10">
-      <div class="mx-auto flex max-w-content flex-col gap-2 px-6 py-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between lg:px-10">
+      <div class="mx-auto flex max-w-content flex-col gap-4 px-6 py-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between lg:px-10">
         <p>© 2026 Nexco. Todos os direitos reservados.</p>
-
-        <div class="flex gap-6">
+        
+        <div class="flex flex-wrap gap-x-6 gap-y-2">
           <a href="#" class="hover:text-white">Termos e condições</a>
           <a href="#" class="hover:text-white">Políticas de Privacidade</a>
         </div>

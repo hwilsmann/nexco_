@@ -14,14 +14,14 @@
 </script>
 
 <template>
-  <section id="sobre" class="bg-white lg:pt-24">
+  <section class="bg-white lg:pt-24">
     <div class="mx-auto max-w-content px-6 lg:px-10">
-      <span class="inline-block rounded-full bg-brand-mint/50 px-4 py-1.5 text-xs font-medium text-forest-950/70">Quem somos</span>
+      <span class="inline-block rounded-full bg-brand-mint/50 px-4 py-1.5 text-xs font-medium text-forest-950/70" data-aos="fade-right" data-aos-delay="100">Quem somos</span>
 
-      <h2 class="mt-6 text-2xl font-bold leading-[1.2] text-forest-950 sm:mt-8 sm:text-3xl lg:mt-10 lg:text-[2.375rem]">Somos uma consultoria que oferece soluções completas de RH que vão desde o recrutamento e seleção em todos os níveis e formatos de trabalho, <span class="text-forest-950/40">apoiando os talentos em toda a sua jornada.</span></h2>
+      <h2 class="mt-6 text-2xl font-bold leading-[1.2] text-forest-950 sm:mt-8 sm:text-3xl lg:mt-10 lg:text-[2.375rem]" data-aos="fade-right" data-aos-delay="200">Somos uma consultoria que oferece soluções completas de RH que vão desde o recrutamento e seleção em todos os níveis e formatos de trabalho, <span class="text-forest-950/40">apoiando os talentos em toda a sua jornada.</span></h2>
 
       <div class="mt-8 grid grid-cols-1 gap-4 sm:mt-10 sm:grid-cols-2 lg:grid-cols-4">
-        <div v-for="stat in stats" :key="stat.label" class="relative sm:h-[140px]">
+        <div v-for="(stat, index) in stats" :key="stat.label" class="relative sm:h-[140px]" data-aos="fade-up" :data-aos-delay="(index + 1) * 300">
           <div :class="[stat.bg, 'group relative rounded-2xl p-5 sm:absolute sm:inset-x-0 sm:top-0 sm:z-10 sm:overflow-hidden sm:p-6 sm:transition-all sm:duration-300 sm:hover:h-auto']">
             <p class="text-3xl font-semibold text-forest-950 sm:text-4xl lg:text-[3.125rem]">{{ stat.value }}</p>
 

@@ -38,18 +38,18 @@
 
 <template>
   <section class="relative overflow-hidden py-12 sm:py-16 lg:py-24">
-    <div class="mx-auto max-w-content rounded-2xl bg-brand-peach/40 px-6 py-8 pb-40 sm:px-8 sm:py-10 sm:pb-48 lg:px-20 lg:py-20 lg:pb-[20rem]">
-      <span class="inline-block rounded-full bg-brand-peach px-4 py-1.5 text-xs font-medium text-forest-950/70">Expertises</span>
+    <div class="mx-auto max-w-content rounded-2xl bg-brand-peach/40 px-6 py-8 pb-40 sm:px-8 sm:py-10 sm:pb-48 lg:px-20 lg:py-20 lg:pb-[20rem] overflow-hidden">
+      <span class="inline-block rounded-full bg-brand-peach px-4 py-1.5 text-xs font-medium text-forest-950/70" data-aos="fade-up" data-aos-delay="100">Expertises</span>
 
       <div class="mt-6 grid gap-6 lg:grid-cols-2 lg:gap-10">
-        <div>
+        <div data-aos="fade-up" data-aos-delay="200">
           <h2 class="max-w-xl text-3xl font-bold leading-snug text-forest-950 sm:text-4xl">Conhecimento especializado para cada mercado</h2>
         </div>
 
         <div class="flex flex-col items-start gap-5 sm:gap-6 lg:flex-row lg:items-start">
-          <p class="max-w-xl text-sm leading-relaxed text-forest-950/60">Nossos consultores combinam experiência em recrutamento e gestão de pessoas com conhecimento das áreas em que os profissionais atuam.</p>
+          <p class="max-w-xl text-sm leading-relaxed text-forest-950/60" data-aos="fade-left" data-aos-delay="300">Nossos consultores combinam experiência em recrutamento e gestão de pessoas com conhecimento das áreas em que os profissionais atuam.</p>
 
-          <a href="#contato" class="inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full bg-forest-900 px-4 py-2.5 text-sm font-semibold text-white/85">
+          <a href="#contato" class="inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full bg-forest-900 px-4 py-2.5 text-sm font-semibold text-white/85" data-aos="fade-left" data-aos-delay="400">
             Fale com um consultor
 
             <div class="grid h-7 w-7 place-items-center rounded-full bg-brand-green">
@@ -60,7 +60,7 @@
       </div>
 
       <div class="relative z-10 mt-8 grid gap-4 sm:mt-10 sm:gap-6 sm:grid-cols-2 lg:mt-12 lg:grid-cols-4">
-        <article v-for="group in Groups" :key="group.title" class="overflow-hidden rounded-2xl bg-white p-4 sm:p-5">
+        <article v-for="(group, index) in Groups" data-aos="fade-up" :data-aos-delay="(index + 1) * 300" :key="group.title" class="overflow-hidden rounded-2xl bg-white p-4 sm:p-5">
           <img :src="group.image" :alt="group.title" class="h-28 w-full rounded-2xl object-cover sm:h-32" />
 
           <div class="mt-4 sm:mt-5">

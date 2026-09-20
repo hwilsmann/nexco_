@@ -8,7 +8,7 @@
   import user2Icon from '../../components/icons/User2.vue'
   import user3Icon from '../../components/icons/User3.vue'
   import user4Icon from '../../components/icons/User4.vue'
-  import vetor4Icon from '../../components/icons/Vetor.vue'
+  import vetorIcon from '../../components/icons/Vetor.vue'
 
   import { ref, computed, type Component } from 'vue'
 
@@ -136,15 +136,16 @@
 </script>
 
 <template>
-  <section id="solucoes" class="bg-white lg:pt-24">
+  <section class="bg-white lg:pt-24">
     <div class="mx-auto max-w-content px-6 text-center lg:px-10">
-      <span class="inline-block rounded-full bg-brand-mint px-4 py-1.5 text-xs font-medium text-forest-950">Soluções</span>
-      <h2 class="mx-auto mt-5 max-w-2xl text-3xl font-bold leading-snug text-forest-950 sm:mt-6 sm:text-4xl">Soluções de RH para diferentes momentos do negócio</h2>
+      <span class="inline-block rounded-full bg-brand-mint px-4 py-1.5 text-xs font-medium text-forest-950" data-aos="fade-up" data-aos-delay="100">Soluções</span>
+
+      <h2 class="mx-auto mt-5 max-w-2xl text-3xl font-bold leading-snug text-forest-950 sm:mt-6 sm:text-4xl" data-aos="fade-up" data-aos-delay="200">Soluções de RH para diferentes momentos do negócio</h2>
     </div>
 
     <div class="mx-auto mt-10 max-w-content px-6 sm:mt-12 lg:px-10">
       <div class="flex gap-6 overflow-x-auto border-b border-forest-950/10 px-1 sm:gap-8 sm:overflow-visible sm:px-10">
-        <button v-for="tab in Tabs" :key="tab.key" type="button" class="relative shrink-0 pb-4 text-sm font-semibold transition-colors" :class="ActiveKey === tab.key ? '' : 'text-forest-950/40 hover:text-forest-950/70'" :style="ActiveKey === tab.key ? { color: tab.color } : undefined" @click="ActiveKey = tab.key">
+        <button v-for="(tab, index) in Tabs" :key="tab.key" type="button" data-aos="fade-right" :data-aos-delay="(index + 1) * 300" class="relative shrink-0 pb-4 text-sm font-semibold transition-colors" :class="ActiveKey === tab.key ? '' : 'text-forest-950/40 hover:text-forest-950/70'" :style="ActiveKey === tab.key ? { color: tab.color } : undefined" @click="ActiveKey = tab.key">
           {{ tab.label.toUpperCase() }}
 
           <span v-if="ActiveKey === tab.key" class="absolute inset-x-0 -bottom-px h-0.5 rounded-full" :style="{ backgroundColor: tab.color }"></span>
@@ -153,16 +154,16 @@
 
       <div class="mt-8 grid gap-8 sm:mt-10 lg:grid-cols-[380px_1fr] lg:items-start">
         <div class="relative">
-          <img :src="ActiveTab.image" :alt="ActiveTab.label" class="h-[360px] w-full rounded-2xl object-cover sm:h-[440px] lg:h-[523px]" />
+          <img :src="ActiveTab.image" :alt="ActiveTab.label" class="h-[360px] w-full rounded-2xl object-cover sm:h-[440px] lg:h-[523px]" data-aos="fade-up" data-aos-delay="300" />
 
-          <div class="absolute bottom-[-2.5rem] left-1/2 -translate-x-1/2 sm:bottom-[-3rem] lg:bottom-[9.5rem] lg:left-[-9.2rem] lg:translate-x-0">
-            <vetor4Icon />
+          <div class="absolute bottom-[-2.5rem] left-1/2 -translate-x-1/2 sm:bottom-[-3rem] lg:bottom-[9.5rem] lg:left-[-9.2rem] lg:translate-x-0" data-aos="fade-right" data-aos-delay="400">
+            <vetorIcon />
           </div>
         </div>
 
         <div>
           <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
-            <article v-for="card in ActiveTab.cards" :key="card.title" class="rounded-2xl border border-forest-950/10 p-5 sm:p-6">
+            <article v-for="(card, index) in ActiveTab.cards" data-aos="fade-down" :data-aos-delay="(index + 1) * 300" :key="card.title" class="rounded-2xl border border-forest-950/10 p-5 sm:p-6">
               <span class="grid h-9 w-9 place-items-center rounded-xl text-base" :style="{ backgroundColor: `${ActiveTab.color}50` }"><component :is="card.icon" /></span>
 
               <h3 class="mt-4 text-base font-semibold text-forest-950">{{ card.title }}</h3>
@@ -176,7 +177,7 @@
       </div>
 
       <div class="mt-10 flex justify-center sm:justify-end">
-        <a href="#contato" class="inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-forest-900 px-4 py-2.5 text-sm font-semibold text-white/85">
+        <a href="#contato" class="inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-forest-900 px-4 py-2.5 text-sm font-semibold text-white/85" data-aos="fade-left" data-aos-delay="400">
           Fale com um consultor
           
           <div class="grid h-7 w-7 place-items-center rounded-full bg-brand-green">

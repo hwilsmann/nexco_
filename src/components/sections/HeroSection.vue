@@ -2,16 +2,18 @@
 <script setup lang="ts">
   import hero60Image from '../../assets/images/hero60.png'
   import hero40Image from '../../assets/images/hero40.png'
-  import vetor4Icon from '../../components/icons/Vetor.vue'
+  import vetorIcon from '../../components/icons/Vetor.vue'
 </script>
 
 <template>
-  <section id="top" class="relative overflow-hidden bg-forest-900 text-white">
+  <section class="relative overflow-hidden bg-forest-900 text-white">
     <div class="mx-auto grid max-w-content items-center gap-10 px-6 pb-16 pt-10 sm:gap-12 sm:pb-20 lg:grid-cols-2 lg:px-10 lg:pt-16">
       <div>
-        <h1 class="text-4xl font-medium leading-[1.2] tracking-tight sm:text-[2.75rem] lg:text-[3.25rem]">Encontre os talentos para <span class="text-brand-green">transformar a sua empresa</span></h1>
-        <p class="mt-6 max-w-md text-white/60 sm:mt-8">Ajudamos nossos clientes a contratar o talento certo com as competências mais relevantes para os negócios.</p>
-        <div class="mt-6 flex flex-col items-start gap-3 sm:mt-8 sm:flex-row sm:items-center sm:gap-6">
+        <h1 class="text-4xl font-medium leading-[1.2] tracking-tight sm:text-[2.75rem] lg:text-[3.25rem]" data-aos="fade-down" data-aos-delay="100">Encontre os talentos para <span class="text-brand-green">transformar a sua empresa</span></h1>
+
+        <p class="mt-6 max-w-md text-white/60 sm:mt-8" data-aos="fade-up" data-aos-delay="200">Ajudamos nossos clientes a contratar o talento certo com as competências mais relevantes para os negócios.</p>
+
+        <div class="mt-6 flex flex-col items-start gap-3 sm:mt-8 sm:flex-row sm:items-center sm:gap-6" data-aos="fade-up" data-aos-delay="300">
           <a href="#contato" class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-brand-green px-4 py-2.5 text-sm font-semibold text-forest-950">
             Quero contratar
             
@@ -20,7 +22,7 @@
             </div>
           </a>
 
-          <a href="#contato" class="inline-flex items-center gap-2 rounded-full px-4 py-2.5 text-sm font-semibold">
+          <a href="#contato" class="inline-flex items-center gap-2 rounded-full px-4 py-2.5 text-sm font-semibold" data-aos="fade-up" data-aos-delay="400">
             Conheça as soluções
 
             <div class="grid h-7 w-7 place-items-center rounded-full">
@@ -31,16 +33,16 @@
       </div>
 
       <div class="relative flex min-h-[320px] items-start justify-center sm:min-h-[380px] lg:min-h-0 lg:justify-start">
-        <div class="w-[65%] sm:w-auto">
+        <div class="w-[65%] sm:w-auto" data-aos="fade-up" data-aos-delay="500">
           <img :src="hero40Image" alt="Consultora sorrindo em ambiente corporativo" class="h-[300px] w-full rounded-2xl object-cover sm:h-[380px] sm:w-[260px] lg:h-[439px] lg:w-auto" />
         </div>
 
-        <div class="mt-10 w-[50%] sm:mt-16 sm:w-auto lg:mt-6">
+        <div class="mt-10 w-[50%] sm:mt-16 sm:w-auto lg:mt-6" data-aos="fade-down" data-aos-delay="600">
           <img :src="hero60Image" alt="Equipe colaborando" class="h-[190px] w-full rounded-2xl object-cover sm:h-[225px] sm:w-[220px] lg:h-[255px] lg:w-auto" />
         </div>
 
-        <div class="absolute bottom-12 left-1/2 -translate-x-1/2 sm:bottom-16 sm:left-[17rem] sm:translate-x-0 lg:bottom-[5.5rem] lg:left-[17.2rem]">
-          <vetor4Icon />
+        <div class="absolute bottom-12 left-1/2 -translate-x-1/2 sm:bottom-16 sm:left-[17rem] sm:translate-x-0 lg:bottom-[5.5rem] lg:left-[17.2rem]" data-aos="fade-right" data-aos-delay="700">
+          <vetorIcon />
         </div>
       </div>
     </div>

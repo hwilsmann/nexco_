@@ -4,6 +4,8 @@
   import marketinggrowthImage from '../../assets/images/marketinggrowth.png'
   import operationslogisticsImage from '../../assets/images/operationslogistics.png'
 
+  import vetorIcon from '../../components/icons/VetorYellow.vue'
+
   interface ExpertiseGroup {
     title: string
     image: string
@@ -38,24 +40,28 @@
 
 <template>
   <section class="relative overflow-hidden py-12 sm:py-16 lg:py-24">
-    <div class="mx-auto max-w-content rounded-2xl bg-brand-peach/40 px-6 py-8 pb-40 sm:px-8 sm:py-10 sm:pb-48 lg:px-20 lg:py-20 lg:pb-[20rem] overflow-hidden">
-      <span class="inline-block rounded-full bg-brand-peach px-4 py-1.5 text-xs font-medium text-forest-950/70" data-aos="fade-up" data-aos-delay="100">Expertises</span>
+    <div class="mx-auto max-w-content rounded-2xl bg-brand-peach/40 px-6 py-8 pb-40 sm:px-8 sm:py-10 sm:pb-48 lg:px-20 lg:py-20 lg:pb-[20rem]">
+      <span class="inline-block rounded-full bg-brand-peach px-4 py-1.5 text-xs font-medium uppercase text-forest-950/70" data-aos="fade-up" data-aos-delay="100">Expertises</span>
 
       <div class="mt-6 grid gap-6 lg:grid-cols-2 lg:gap-10">
         <div data-aos="fade-up" data-aos-delay="200">
-          <h2 class="max-w-xl text-3xl font-bold leading-snug text-forest-950 sm:text-4xl">Conhecimento especializado para cada mercado</h2>
+          <h2 class="text-[41px] font-semibold leading-[52px] tracking-[-3%]">Conhecimento especializado para cada mercado</h2>
         </div>
 
-        <div class="flex flex-col items-start gap-5 sm:gap-6 lg:flex-row lg:items-start">
+        <div class="flex flex-col items-start gap-5 sm:gap-6 lg:flex-row lg:items-start relative">
           <p class="max-w-xl text-sm leading-relaxed text-forest-950/60" data-aos="fade-left" data-aos-delay="300">Nossos consultores combinam experiência em recrutamento e gestão de pessoas com conhecimento das áreas em que os profissionais atuam.</p>
 
-          <a href="#contato" class="inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full bg-forest-900 px-4 py-2.5 text-sm font-semibold text-white/85" data-aos="fade-left" data-aos-delay="400">
+          <a href="#contato" class="inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full bg-forest-900 px-4 py-2.5 text-sm font-semibold text-white/85 relative z-[1]" data-aos="fade-left" data-aos-delay="400">
             Fale com um consultor
 
             <div class="grid h-7 w-7 place-items-center rounded-full bg-brand-green">
               <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.292893 10.8993C-0.0976311 11.2899 -0.0976311 11.923 0.292893 12.3136C0.683418 12.7041 1.31658 12.7041 1.70711 12.3136L1 11.6064L0.292893 10.8993ZM12.6066 0.999844C12.6066 0.447559 12.1589 -0.000156485 11.6066 -0.000156063L2.6066 -0.000155937C2.05432 -0.000156274 1.6066 0.447559 1.6066 0.999844C1.6066 1.55213 2.05432 1.99984 2.6066 1.99984L10.6066 1.99984L10.6066 9.99984C10.6066 10.5521 11.0543 10.9998 11.6066 10.9998C12.1589 10.9998 12.6066 10.5521 12.6066 9.99984L12.6066 0.999844ZM1 11.6064L1.70711 12.3136L12.3137 1.70695L11.6066 0.999844L10.8995 0.292737L0.292893 10.8993L1 11.6064Z" fill="#10211F"/></svg>
             </div>
           </a>
+
+          <div class="absolute top-[-1rem] left-[29rem] hidden sm:block" data-aos="fade-left" data-aos-delay="700">
+            <vetorIcon />
+          </div>
         </div>
       </div>
 

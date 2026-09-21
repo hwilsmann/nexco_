@@ -41,7 +41,7 @@
       
       <ul class="flex w-full flex-wrap items-center justify-center gap-x-8 gap-y-5 grayscale sm:gap-x-12 sm:gap-y-6 lg:w-auto lg:gap-x-20 lg:gap-y-4">
         <li v-for="(logo, index) in groups" :key="index" data-aos="fade-right" :data-aos-delay="(index + 1) * 300">
-          <img :src="logo.image" :alt="logo.title" class="h-5 w-auto object-contain sm:h-6" />
+          <img :src="logo.image" :alt="logo.title" class="h-5 w-auto object-contain sm:h-6 max-w-[6rem]" />
         </li>
       </ul>
     </div>

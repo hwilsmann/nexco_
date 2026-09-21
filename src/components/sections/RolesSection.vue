@@ -37,7 +37,7 @@
 <template>
   <section class="bg-white py-14 sm:py-20 lg:py-24">
     <div class="mx-auto max-w-content px-6 text-center lg:px-10" data-aos="fade-down" data-aos-delay="100">
-      <p class="text-sm leading-relaxed text-forest-950/60">Alocação estratégica com +150 cargos diferentes para a sua empresa</p>
+      <p class="text-sm leading-relaxed text-forest-950">Alocação estratégica com <strong>+150 cargos diferentes para a sua empresa</strong></p>
     </div>
 
     <div class="relative mx-auto mt-6 max-w-content space-y-3 overflow-hidden whitespace-nowrap before:absolute before:inset-y-0 before:left-0 before:z-10 before:w-16 before:bg-gradient-to-r before:from-white before:to-transparent after:absolute after:inset-y-0 after:right-0 after:z-10 after:w-16 after:bg-gradient-to-l after:from-white after:to-transparent sm:mt-8 sm:space-y-4 sm:before:w-32 sm:after:w-32 lg:before:w-80 lg:after:w-80" data-aos="fade" data-aos-delay="200">

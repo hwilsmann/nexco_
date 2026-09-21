@@ -1,6 +1,9 @@
 <script setup lang="ts">
   import IconGlobe from '../icons/Globe.vue'
   import depoimentosImage from '../../assets/images/depoimentos.png'
+
+  import vetorIcon from '../../components/icons/Vetor.vue'
+
   import { ref, computed } from 'vue'
 
   interface Testimonial {
@@ -32,9 +35,9 @@
 </script>
 
 <template>
-  <section class="bg-white lg:pt-24">
+  <section class="bg-white pt-12 lg:pt-24">
     <div class="mx-auto max-w-content px-5 sm:px-6 lg:px-0">
-      <span class="inline-block rounded-full bg-brand-mint/50 px-4 py-1.5 text-xs font-medium text-forest-950/70" data-aos="fade-up" data-aos-delay="100">Depoimentos</span>
+      <span class="inline-block rounded-full bg-brand-mint/50 px-4 py-1.5 text-xs font-medium text-forest-950/70 uppercase" data-aos="fade-up" data-aos-delay="100">Depoimentos</span>
 
       <div class="mt-8 grid gap-10 sm:mt-10 lg:grid-cols-[minmax(0,1fr)_480px] lg:gap-12">
         <div class="min-w-0">
@@ -59,7 +62,7 @@
           </div>
         </div>
 
-        <div class="relative h-[420px] w-full overflow-hidden rounded-[24px] sm:h-[480px] sm:rounded-[28px] lg:h-[543px]" data-aos="fade-left" data-aos-delay="500">
+        <div class="relative h-[420px] w-full rounded-[24px] sm:h-[480px] sm:rounded-[28px] lg:h-[543px]" data-aos="fade-left" data-aos-delay="500">
           <img :src="depoimentosImage" alt="Depoimentos Nexco" class="h-full w-full object-cover" />
 
           <div class="absolute bottom-4 left-4 right-4 flex items-start justify-between gap-4 rounded-2xl bg-forest-950 p-4 text-white sm:bottom-6 sm:left-6 sm:right-6 sm:p-5 lg:bottom-8 lg:left-8 lg:right-8">
@@ -69,6 +72,10 @@
             </div>
 
             <div class="shrink-0"><IconGlobe /></div>
+          </div>
+
+          <div class="absolute top-[14rem] left-[25rem] hidden sm:block" data-aos="fade-right" data-aos-delay="400">
+            <vetorIcon />
           </div>
         </div>
       </div>

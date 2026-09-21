@@ -14,7 +14,7 @@
   <div class="min-h-screen bg-white">
     <TheHeader />
 
-    <main>
+    <main class="overflow-hidden">
       <HeroSection />
       <LogosSection />
       <AboutSection />

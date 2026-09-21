@@ -41,7 +41,7 @@
 <template>
   <section class="relative overflow-hidden py-12 sm:py-16 lg:py-24">
     <div class="mx-auto max-w-content rounded-2xl bg-brand-peach/40 px-6 py-8 pb-40 sm:px-8 sm:py-10 sm:pb-48 lg:px-20 lg:py-20 lg:pb-[20rem]">
-      <span class="inline-block rounded-full bg-brand-peach px-4 py-1.5 text-xs font-medium uppercase text-forest-950/70" data-aos="fade-up" data-aos-delay="100">Expertises</span>
+      <span class="inline-block rounded-full bg-brand-peach px-4 py-1.5 text-[10px] font-medium uppercase text-forest-950/70" data-aos="fade-up" data-aos-delay="100">Expertises</span>
 
       <div class="mt-6 grid gap-6 lg:grid-cols-2 lg:gap-10">
         <div data-aos="fade-up" data-aos-delay="200">

@@ -21,7 +21,7 @@
   <header class="sticky top-0 z-50 bg-forest-900">
     <div class="mx-auto flex max-w-content items-center justify-between gap-4 px-6 py-4 sm:py-5 lg:px-10">
       <div class="flex gap-[6rem] items-center">
-        <a href="#top" class="shrink-0 text-brand-green" data-aos="fade-right" data-aos-delay="100">
+        <a href="#top" class="shrink-0 text-brand-green">
           <svg width="104" height="23" viewBox="0 0 104 23" fill="currentColor">
             <path d="M0 22.1847V9.64739C0 7.72075 0.424995 6.03493 1.27499 4.58995C2.15331 3.14496 3.35746 2.02581 4.88744 1.23249C6.41743 0.41083 8.15991 0 10.1149 0C12.0982 0 13.8407 0.41083 15.3423 1.23249C16.8723 2.02581 18.0623 3.14496 18.9123 4.58995C19.7906 6.03493 20.2298 7.72075 20.2298 9.64739V22.1847H16.3198V9.68989C16.3198 8.38657 16.0223 7.26742 15.4273 6.33243C14.8607 5.36911 14.0957 4.63245 13.1324 4.12245C12.1974 3.61246 11.1915 3.35746 10.1149 3.35746C9.03823 3.35746 8.01824 3.61246 7.05492 4.12245C6.11993 4.63245 5.35494 5.36911 4.75995 6.33243C4.19329 7.26742 3.90996 8.38657 3.90996 9.68989V22.1847H0Z" />
             <path d="M34.8521 22.1847C32.4722 22.1847 30.3614 21.7456 28.5197 20.8673C26.6781 19.9606 25.2331 18.6998 24.1848 17.0848C23.1648 15.4415 22.6548 13.529 22.6548 11.3474C22.6548 9.19406 23.0939 7.26742 23.9723 5.56744C24.8506 3.83912 26.0689 2.47914 27.6272 1.48748C29.1855 0.495828 30.9989 0 33.0672 0C35.3055 0 37.1613 0.481661 38.6346 1.44498C40.1363 2.40831 41.2554 3.71163 41.9921 5.35494C42.7287 6.96992 43.0971 8.78323 43.0971 10.7949C43.0971 11.1065 43.0829 11.4324 43.0546 11.7724C43.0546 12.1124 43.0262 12.4099 42.9696 12.6649H26.8197C26.9614 13.9965 27.4006 15.1298 28.1372 16.0648C28.8739 16.9715 29.8089 17.6656 30.9422 18.1473C32.1038 18.6006 33.3788 18.8273 34.7671 18.8273H40.4196V22.1847H34.8521ZM26.7772 9.90239H39.1446C39.1446 9.36406 39.0879 8.7974 38.9746 8.20241C38.8613 7.57908 38.6629 6.98409 38.3796 6.41743C38.0963 5.82244 37.7138 5.29827 37.2321 4.84494C36.7788 4.36328 36.198 3.98079 35.4896 3.69746C34.8096 3.41413 34.0022 3.27246 33.0672 3.27246C32.0755 3.27246 31.1972 3.47079 30.4322 3.86746C29.6955 4.23579 29.058 4.74578 28.5197 5.39744C27.9814 6.02077 27.5706 6.72909 27.2872 7.52241C27.0039 8.31574 26.8339 9.10906 26.7772 9.90239Z" />
@@ -32,7 +32,7 @@
         </a>
 
         <nav class="hidden items-center gap-[4rem] lg:flex">
-          <a v-for="(item, index) in NavItems" data-aos="fade-down" :data-aos-delay="(index + 1) * 300" :key="item.label" :href="item.href" class="flex items-center gap-1 whitespace-nowrap text-sm font-medium text-white/85 transition-colors hover:text-white">
+          <a v-for="(item, index) in NavItems" :key="item.label" :href="item.href" class="flex items-center gap-1 whitespace-nowrap text-sm font-medium text-white/85 transition-colors hover:text-white">
             {{ item.label }}
 
             <svg v-if="item.HasSubmenu" width="10" height="6" viewBox="0 0 10 6" fill="none" class="text-brand-green"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
@@ -40,7 +40,7 @@
         </nav>
       </div>
 
-      <a href="#contato" class="hidden shrink-0 items-center gap-2 rounded-full border border-white/10 bg-forest-800/30 px-4 py-2.5 text-sm font-semibold text-white/85 sm:inline-flex lg:inline-flex" data-aos="fade-left" data-aos-delay="100">
+      <a href="#contato" class="hidden shrink-0 items-center gap-2 rounded-full border border-white/10 bg-forest-800/30 px-4 py-2.5 text-sm font-semibold text-white/85 sm:inline-flex lg:inline-flex">
         Fale com um consultor
 
         <div class="grid h-7 w-7 place-items-center rounded-full bg-brand-green">

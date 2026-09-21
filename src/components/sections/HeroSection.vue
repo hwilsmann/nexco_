@@ -30,16 +30,16 @@
         </div>
       </div>
 
-      <div class="relative mt-10 flex w-full items-start justify-center gap-3 sm:mt-10 sm:gap-5 lg:mt-0 lg:w-[48%] lg:justify-start">
-        <div data-aos="fade-up" data-aos-delay="500">
+      <div class="relative mt-10 flex w-full items-start justify-center gap-3 sm:mt-10 sm:gap-5 lg:mt-0 lg:w-[48%] lg:justify-start" data-aos="fade" data-aos-delay="100">
+        <div>
           <img :src="hero40Image" alt="Consultora sorrindo em ambiente corporativo" class="w-full rounded-2xl object-cover" />
         </div>
         
-        <div class="mt-10" data-aos="fade-down" data-aos-delay="600">
+        <div class="mt-10">
           <img :src="hero60Image" alt="Equipe colaborando" class="w-full rounded-2xl object-cover" />
         </div>
 
-        <div class="absolute bottom-[8%] left-[48%] -translate-x-1/2 sm:bottom-[10%] sm:left-[50%] lg:bottom-[12%] lg:left-[53%]" data-aos="fade-right" data-aos-delay="700">
+        <div class="absolute bottom-[8%] left-[48%] -translate-x-1/2 sm:bottom-[10%] sm:left-[50%] lg:bottom-[12%] lg:left-[53%]" data-aos="fade-left" data-aos-delay="500">
           <vetorIcon class="h-auto w-10 sm:w-12 lg:w-full hidden sm:block" />
         </div>
       </div>

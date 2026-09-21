@@ -16,11 +16,11 @@
 <template>
   <section class="bg-white pt-12 lg:pt-24">
     <div class="mx-auto max-w-content px-6 lg:px-10">
-      <span class="inline-block rounded-full bg-[#DEEAE8] px-4 py-1.5 text-xs font-medium uppercase" data-aos="fade-right" data-aos-delay="100">Quem somos</span>
+      <span class="inline-block rounded-full bg-[#DEEAE8] px-4 py-1.5 text-[10px] font-medium uppercase" data-aos="fade-right" data-aos-delay="100">Quem somos</span>
 
       <h2 class="mt-6 text-2xl font-medium leading-[29px] tracking-[-3%] text-forest-950 sm:mt-8 sm:text-3xl sm:leading-[36px] lg:mt-10 lg:text-[38px] lg:leading-[46px]" data-aos="fade-right" data-aos-delay="200">Somos uma consultoria que oferece soluções completas de RH que vão desde o recrutamento e seleção em todos os níveis e formatos de trabalho, <span class="text-forest-950/40">apoiando os talentos em toda a sua jornada.</span></h2>
 
-      <div class="mt-8 grid grid-cols-1 gap-4 sm:mt-10 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="mt-8 grid grid-cols-1 gap-4 sm:mt-12 sm:grid-cols-2 lg:grid-cols-4">
         <div v-for="(stat, index) in stats" :key="stat.label" class="relative" data-aos="fade-up" :data-aos-delay="(index + 1) * 300">
           <div :class="[stat.bg, 'relative rounded-2xl p-5 sm:p-6']">
             <p class="font-semibold tracking-[-3%] text-forest-950 lg:text-[50px]">{{ stat.value }}</p>

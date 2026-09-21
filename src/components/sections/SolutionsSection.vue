@@ -138,9 +138,9 @@
 <template>
   <section class="bg-white pt-12 lg:pt-24">
     <div class="mx-auto max-w-content px-6 text-center lg:px-10">
-      <span class="inline-block rounded-full bg-brand-mint px-4 py-1.5 text-xs font-medium uppercase text-forest-950" data-aos="fade-up" data-aos-delay="100">Soluções</span>
+      <span class="inline-block rounded-full bg-brand-mint px-4 py-1.5 text-[10px] font-medium uppercase text-forest-950" data-aos="fade-up" data-aos-delay="100">Soluções</span>
 
-      <h2 class="mx-auto mt-5 max-w-2xl text-3xl font-bold leading-snug text-forest-950 sm:mt-6 sm:text-4xl" data-aos="fade-up" data-aos-delay="200">Soluções de RH para diferentes momentos do negócio</h2>
+      <h2 class="mx-auto mt-5 text-[48px] font-semibold leading-[52px] tracking-[-3%]" data-aos="fade-up" data-aos-delay="200">Soluções de RH para diferentes<br />momentos do negócio</h2>
     </div>
 
     <div class="mx-auto mt-10 max-w-content px-6 sm:mt-12 lg:px-10">
@@ -163,7 +163,7 @@
 
         <div>
           <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
-            <article v-for="(card, index) in ActiveTab.cards" data-aos="fade-down" :data-aos-delay="(index + 1) * 300" :key="card.title" class="rounded-2xl border border-forest-950/10 p-5 sm:p-6">
+            <article v-for="(card, index) in ActiveTab.cards" data-aos="fade" :key="card.title" class="rounded-2xl border border-forest-950/10 p-5 sm:p-6">
               <span class="grid h-9 w-9 place-items-center rounded-xl text-base" :style="{ backgroundColor: `${ActiveTab.color}50` }"><component :is="card.icon" /></span>
 
               <h3 class="mt-4 text-base font-semibold text-forest-950">{{ card.title }}</h3>

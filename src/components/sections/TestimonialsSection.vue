@@ -12,7 +12,7 @@
   }
 
   const testimonials: Testimonial[] = [
-    { quote: 'A Nexco combinou experiência em recrutamento e gestão de pessoas com um profundo conhecimento das áreas em que atuamos. O processo foi rápido e muito bem conduzido do início ao fim. A Nexco combinou experiência em recrutamento e gestão de pessoas com um profundo conhecimento das áreas em que atuamos. O processo foi rápido e muito bem conduzido do início ao fim.', author: 'PwC' },
+    { quote: 'A Nexco combinou experiência em recrutamento e gestão de pessoas com um profundo conhecimento das áreas em que atuamos. O processo foi rápido e muito bem conduzido do início ao fim. A Nexco combinou experiência em recrutamento e gestão de pessoas com um profundo conhecimento das áreas em que atuamos.', author: 'PwC' },
     { quote: 'A equipe da Nexco entendeu exatamente o perfil que precisávamos e trouxe candidatos alinhados à nossa cultura e às competências técnicas exigidas pela posição.', author: 'Ittl' },
     { quote: 'Contar com a Nexco para posições estratégicas fez toda a diferença.', author: 'Samsung' },
   ]
@@ -37,17 +37,19 @@
 <template>
   <section class="bg-white pt-12 lg:pt-24">
     <div class="mx-auto max-w-content px-5 sm:px-6 lg:px-0">
-      <span class="inline-block rounded-full bg-brand-mint/50 px-4 py-1.5 text-xs font-medium text-forest-950/70 uppercase" data-aos="fade-up" data-aos-delay="100">Depoimentos</span>
+      <span class="inline-block rounded-full bg-brand-mint/50 px-4 py-1.5 text-[10px] font-medium text-forest-950/70 uppercase" data-aos="fade-up" data-aos-delay="100">Depoimentos</span>
 
       <div class="mt-8 grid gap-10 sm:mt-10 lg:grid-cols-[minmax(0,1fr)_480px] lg:gap-12">
-        <div class="min-w-0">
-          <h2 class="text-3xl font-bold leading-[1.2] text-forest-950 sm:text-4xl lg:text-[2.5rem]" data-aos="fade-up" data-aos-delay="200">O sucesso dos nossos clientes é a nossa melhor referência</h2>
+        <div class="min-w-0 flex flex-col justify-between">
+          <div>
+            <h2 class="text-[48px] font-semibold leading-[52px] tracking-[-3%]" data-aos="fade-up" data-aos-delay="200">O sucesso dos nossos clientes é a nossa melhor referência</h2>
 
-          <div class="mt-8 grid grid-cols-1 gap-4 sm:mt-10 sm:gap-6 md:grid-cols-2 items-start">
-            <div v-for="(testimonial, index) in visibleTestimonials" data-aos="fade-up" :data-aos-delay="(index + 1) * 300" :key="testimonial.author" class="min-w-0 rounded-2xl bg-brand-mint/35 p-4 sm:p-5">
-              <blockquote class="text-sm leading-relaxed italic sm:text-base">“{{ testimonial.quote }}”</blockquote>
+            <div class="mt-8 grid grid-cols-1 gap-4 sm:mt-10 sm:gap-6 md:grid-cols-2 items-start">
+              <div v-for="(testimonial, index) in visibleTestimonials" data-aos="fade-up" :data-aos-delay="(index + 1) * 300" :key="testimonial.author" class="min-w-0 rounded-2xl bg-brand-mint/35 p-4 sm:p-5">
+                <blockquote class="text-sm leading-relaxed italic sm:text-base">“{{ testimonial.quote }}”</blockquote>
 
-              <p class="mt-5 text-sm font-semibold text-forest-950 sm:mt-6 sm:text-base">{{ testimonial.author }}</p>
+                <p class="mt-5 text-sm font-semibold text-forest-950 sm:mt-6 sm:text-base">{{ testimonial.author }}</p>
+              </div>
             </div>
           </div>
 

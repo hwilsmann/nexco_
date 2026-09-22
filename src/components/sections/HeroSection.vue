@@ -1,11 +1,12 @@
 <script setup lang="ts">
   import hero60Image from '../../assets/images/hero60.png'
   import hero40Image from '../../assets/images/hero40.png'
+  import heroBg from '../../assets/images/herobg.png'
   import vetorIcon from '../../components/icons/Vetor.vue'
 </script>
 
 <template>
-  <section class="relative overflow-hidden bg-forest-900 text-white">
+  <section class="relative overflow-hidden bg-forest-900 text-white bg-cover bg-center bg-no-repeat" :style="{ backgroundImage: `url(${heroBg})` }">
     <div class="mx-auto flex max-w-content flex-col items-center gap-10 px-6 pb-16 pt-10 sm:pb-20 lg:flex-row lg:px-10 lg:pt-16">
       <div class="w-full lg:w-[52%]">
         <h1 class="text-[2.25rem] font-medium leading-[1.1] tracking-[-0.03em] sm:text-[2.75rem] md:text-[3rem] lg:text-[4rem] lg:leading-[66px]" data-aos="fade-down" data-aos-delay="100">Encontre os talentos para <span class="text-brand-green">transformar a sua empresa</span></h1>

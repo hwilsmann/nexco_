@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
   import vetorIcon from '../../components/icons/Vetor.vue'
 
   import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue'

@@ -31,7 +31,7 @@
     },
   ]
 
-  const carousel = ref(null)
+  const carousel = ref<HTMLDivElement | null>(null)
 
   const CARD_WIDTH = 342
   const GAP = 32
@@ -61,7 +61,7 @@
     }
   }
 
-  const scroll = async (direction) => {
+  const scroll = async (direction: 'prev' | 'next') => {
     const element = carousel.value
     if (!element) return
 

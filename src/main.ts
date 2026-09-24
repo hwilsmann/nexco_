@@ -5,6 +5,8 @@ import App from './App.vue'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
+import router from './router'
+
 AOS.init({
   duration: 800,
   once: true,
@@ -12,4 +14,4 @@ AOS.init({
   easing: 'ease-out',
 })
 
-createApp(App).mount('#app')
+createApp(App).use(router).mount('#app')
